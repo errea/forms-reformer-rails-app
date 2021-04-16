@@ -71,9 +71,6 @@ gem bundle install --without production
 5) heroku run rails db:migrate
 6) git push heroku main
 7) heroku run console
-   
-## Live Delployment 
-This Project was deloped with Heroku. Open  a [Live preview here]()
 
 ## Authors
 
