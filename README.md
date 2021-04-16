@@ -33,7 +33,7 @@ This is the very second project I would build with Ruby on Rails. These projects
 Run the following command into your terminal:
 
 ```console
-git clone https://github.com/errea/Micro-Reddit-Rail-App.git
+git clone https://github.com/errea/forms-reformer-rails-app.git
 
 gem bundle install --without production
 ```
@@ -71,6 +71,9 @@ gem bundle install --without production
 5) heroku run rails db:migrate
 6) git push heroku main
 7) heroku run console
+   
+## Live Delployment 
+This Project was deloped with Heroku. Open  a [Live preview here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/forms)
 
 ## Authors
 
