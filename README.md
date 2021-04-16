@@ -73,7 +73,7 @@ gem bundle install --without production
 7) heroku run console
    
 ## Live Delployment 
-This Project was deloped with Heroku. Open  a [Live preview here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/forms)
+This Project was deloped with Heroku. Open  a [Live preview here]()
 
 ## Authors
 
