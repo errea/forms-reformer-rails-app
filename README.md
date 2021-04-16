@@ -1,8 +1,8 @@
-# Ruby on Rails []Building With Active Record: Micro Reddit Application.
+# Ruby on Rails [Building With Forms: Reformer].
 
-> [Collaborative project]
+> [Second Collaborative project]
 
-This is the very first project I would build with Ruby on Rails. The main goal here is to make Let’s build [Reddit](https://www.reddit.com/). Well, maybe a very junior version of it called micro-reddit. In this project, you’ll build the data structures necessary to support link submissions and commenting. We won’t build a front end for it because we don’t need to… you can use the Rails console to play around with models without the overhead of making HTTP requests and involving controllers or views and  [Find project specifications here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/building-with-active-record-ruby-on-rails)
+This is the very second project I would build with Ruby on Rails. These projects gives me a chance to actually build some forms, both using nearly-pure HTML and then graduating to using the helper methods that Rails provides. In this project I learnt the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters.  [Find project specifications here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/forms)
 
 ## Built With
 
