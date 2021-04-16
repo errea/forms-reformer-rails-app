@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    @user = User.find(params[ :id])
   end
 
   # GET /users/new
@@ -17,33 +18,29 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[ :id])
   end
 
   # POST /users or /users.json
   def create
+    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     @user = User.new(user_params)
-
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      redirect_to root_path
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: "User was successfully updated." }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    @user = User.find(params[ :id])
+    if @user.update(user_params)
+      flash.notice = "User '#{@user.username}' edited!"
+      redirect_to @user
+      # redirect_to root_path(@user)
+    else
+      render :edit
     end
   end
 
