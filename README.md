@@ -36,6 +36,8 @@ Run the following command into your terminal:
 git clone https://github.com/errea/forms-reformer-rails-app.git
 
 gem bundle install --without production
+
+run rails db:migrate to migrate files
 ```
 
 ## Project Structure
