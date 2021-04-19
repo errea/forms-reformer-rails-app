@@ -1,32 +1,26 @@
-<%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+  
+<%= form_for @user do |form| %>
+<ul>
+  <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
   <% end %>
-
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</ul>
+<p>
+  <%= form.label :username, "Username:" %>
+  <%= form.text_field :username, :value => @user.username %><br><br>
+</p>
+<p>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email, :value => @user.email %><br><br>
+</p>
+<p>
+  <%= form.label :password, "Password:" %>
+  <%= form.password_field :password, :value => @user.password %><br><br>
+</p>
+<p>
+  <%= form.submit "Submit" %>
+</p>
+<p>
+  <%= link_to "<< Back to Users List", root_path %><br/>
+</p>
 <% end %>
